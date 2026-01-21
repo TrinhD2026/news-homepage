@@ -14,9 +14,9 @@
   text-decoration: none;
   padding: 0;
   display: contents;
-  width: 100%;
   font-weight: 700;
   font-size: 2rem;
+  color: var(--very-dark-blue);
 }
 
 .navbar ul li a:hover {
