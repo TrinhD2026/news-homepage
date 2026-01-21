@@ -49,7 +49,7 @@
     font-weight: 700;
     cursor: pointer;
     letter-spacing: 0.2rem;
-    width: 50%;
+    width: 10rem;
     height: 3rem;
 }
 
@@ -156,7 +156,7 @@ picture{
             'main-content main-content new-content'
             'main-content main-content new-content'
             'trending-content trending-content trending-content';
-        grid-template-columns: 1fr, 1fr, 100px;
+        grid-template-columns: 1fr, 1fr, 10rem;
         grid-auto-rows: auto;
     }
 
