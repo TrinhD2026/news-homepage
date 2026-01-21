@@ -1,0 +1,38 @@
+.navbar ul {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  margin-left: 2rem;
+}
+
+.navbar ul li {
+    list-style: none;
+    margin-bottom: 3rem;
+}
+
+.navbar ul li a {
+  text-decoration: none;
+  padding: 0;
+  display: contents;
+  width: 100%;
+  font-weight: 700;
+  font-size: 2rem;
+}
+
+.navbar ul li a:hover {
+    color: var(--soft-red);
+}
+
+@media screen and (width >= 860px) {
+    .navbar ul {
+        flex-direction: row;
+        gap: 2rem;
+    }
+    .navbar ul li {
+        margin-bottom: 0;
+    }
+    .navbar ul li a {
+        font-weight: 400;
+        font-size: 1rem;
+    }
+}
