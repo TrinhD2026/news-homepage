@@ -46,7 +46,7 @@ function App() {
     return (
         <div className="container">
             <div className="header-container">
-                <img class="logo" src={mainLogo} alt="main logo" />
+                <img className="logo" src={mainLogo} alt="main logo" />
                 {isNormalMenuVisible && <Menu />}
                 {isMenuButtonVisible && <button class="btn menu-btn" onClick={() => setIsModalMenuVisible(true)}>
                     <img className="icon menu-icon" src={menuIcon} alt="menu icon" />
