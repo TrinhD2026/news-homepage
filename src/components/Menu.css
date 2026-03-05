@@ -1,38 +1,40 @@
-.navbar ul {
+.navbar {
   display: flex;
   flex-direction: column;
   justify-content: space-between;
   margin-left: 2rem;
 }
 
-.navbar ul li {
+/*.navbar ul li {
     list-style: none;
     margin-bottom: 3rem;
-}
+}*/
 
-.navbar ul li a {
+.navbar a {
   text-decoration: none;
   padding: 0;
-  display: contents;
   font-weight: 700;
   font-size: 2rem;
   color: var(--very-dark-blue);
+  margin-bottom: 3rem;
 }
 
-.navbar ul li a:hover {
+.navbar a:hover, .navbar a:focus{
     color: var(--soft-red);
+    outline: 0;
 }
 
 @media screen and (width >= 860px) {
-    .navbar ul {
+    .navbar {
         flex-direction: row;
         gap: 2rem;
     }
-    .navbar ul li {
+    /*.navbar ul li {
         margin-bottom: 0;
-    }
-    .navbar ul li a {
+    }*/
+    .navbar a {
         font-weight: 400;
         font-size: 1rem;
+        margin-bottom: 0;
     }
 }

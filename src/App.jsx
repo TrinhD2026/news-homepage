@@ -1,7 +1,6 @@
 import {useState, useEffect} from 'react';
 import mainLogo from './assets/images/logo.svg';
 import menuIcon from './assets/images/icon-menu.svg';
-/*import menuCloseIcon from './assets/images/icon-menu-close.svg';*/
 import webImageMobile from './assets/images/image-web-3-mobile.jpg';
 import webImageDesktop from './assets/images/image-web-3-desktop.jpg'
 import retroPCsImage from './assets/images/image-retro-pcs.jpg';
@@ -16,9 +15,6 @@ function App() {
     const [isMenuButtonVisible,setIsMenuButtonVisible]=useState(true);
     const [isNormalMenuVisible,setIsNormalMenuVisible]=useState(false);
     const [isModalMenuVisible,setIsModalMenuVisible]=useState(false);
-    const handleClosingMenu=() => {
-        setIsModalMenuVisible(false);
-    }
 
     //TODO:Tdoan: is there any better way to check window being resized?
     useEffect(() => {
@@ -52,13 +48,13 @@ function App() {
                     <img className="icon menu-icon" src={menuIcon} alt="menu icon" />
                 </button>}
 
-                {isModalMenuVisible && <ModalMenu onClose={handleClosingMenu} />}
+                <ModalMenu isOpen={isModalMenuVisible} setIsOpen={setIsModalMenuVisible} />
             </div>
 
             <div className="content-container">
                 <div className="main-content">
                     <picture>
-                        <source srcset={webImageDesktop} media="(min-width: 860px)" />
+                        <source srcSet={webImageDesktop} media="(min-width: 860px)" />
                         <img className="image image-web" src={webImageMobile} alt="web 3 image" />
                     </picture>
                     <h1>The Bright Future of Web 3.0?</h1>
@@ -68,11 +64,11 @@ function App() {
                 <div className="new-content">
                     <h2>New</h2>
                     <a className="anchor title-new" id="title-new-1" href="#about">Hydrogen VS Electric Cars</a>
-                    <p for="title-new-1">Will hydrogen-fueled cars ever catch up to EVs?</p>
+                    <label htmlFor="title-new-1">Will hydrogen-fueled cars ever catch up to EVs?</label>
                     <a className="anchor title-new" id="title-new-2" href="#about">The Downsides of AI Artistry</a>
-                    <p for="title-new-2">What are the possible adverse effects of on-demand AI image generation?</p>
+                    <label htmlFor="title-new-2">What are the possible adverse effects of on-demand AI image generation?</label>
                     <a className="anchor title-new" id="title-new-3" href="#about">Is VC Funding Drying Up?</a>
-                    <p for="title-new-3">Private funding by VC firms is down 50% YOY. We take a look at what that means.</p>
+                    <label htmlFor="title-new-3">Private funding by VC firms is down 50% YOY. We take a look at what that means.</label>
                 </div>
                 <div className="trending-content">
                     <div className="trending-article">
@@ -80,7 +76,7 @@ function App() {
                         <div>
                             <h3>01</h3>
                             <a className="anchor trending" id="title-trending-1" href="#about">Reviving Retro PCs</a>
-                            <p for="title-trending-1">What happens when old PCs are given modern upgrades?</p>
+                            <label htmlFor="title-trending-1">What happens when old PCs are given modern upgrades?</label>
                         </div>
                     </div>
                     <div className="trending-article">
@@ -88,7 +84,7 @@ function App() {
                         <div>
                             <h3>02</h3>
                             <a className="anchor trending" id="title-trending-2" href="#about">Top 10 Laptops of 2022</a>
-                            <p for="title-trending-2">Our best picks for various needs and budgets.</p>
+                            <label htmlFor="title-trending-2">Our best picks for various needs and budgets.</label>
                         </div>
                     </div>
                     <div className="trending-article">
@@ -96,7 +92,7 @@ function App() {
                         <div>
                             <h3>03</h3>
                             <a className="anchor trending" id="title-trending-3" href="#about">The Growth of Gaming</a>
-                            <p for="title-trending-3">How the pandemic has sparked fresh opportunities.</p>
+                            <label htmlFor="title-trending-3">How the pandemic has sparked fresh opportunities.</label>
                         </div>
                     </div>
                 </div>
